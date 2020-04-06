@@ -1,0 +1,7 @@
+package br.com.caelum.ed.pilha;
+
+import br.com.caelum.ed.listaLigada.ListaLigada;
+
+public class Pilha<T> implements IPilha<T>{
+	private ListaLigada<T> lista;
+}

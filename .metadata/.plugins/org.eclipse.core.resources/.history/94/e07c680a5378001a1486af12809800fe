@@ -1,0 +1,29 @@
+package br.com.caelum.ed.pilha;
+
+import br.com.caelum.ed.listaLigada.ListaLigada;
+
+public class Pilha<T> implements IPilha<T>{
+	private ListaLigada<T> lista;
+	
+	public Pilha() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void insere(T t) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public T remove() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isVazia() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

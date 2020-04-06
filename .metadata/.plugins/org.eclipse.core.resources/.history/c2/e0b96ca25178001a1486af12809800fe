@@ -1,0 +1,5 @@
+package br.com.caelum.ed.pilha;
+
+public interface IPilha<T> {
+	
+}

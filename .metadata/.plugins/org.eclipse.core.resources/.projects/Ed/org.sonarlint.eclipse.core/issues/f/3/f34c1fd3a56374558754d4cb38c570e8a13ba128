@@ -1,0 +1,8 @@
+
+k	java:S106"9Replace this use of System.out or System.err by a logger.(ş§ª8Ú€°’”.HõRMAJORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(×ªé›øÿÿÿÿ8œ úê’.HöRMAJORZ
+CODE_SMELL
+_
+java:S1612",Replace this lambda with a method reference.(ş§ª8Éìæò‘.H÷RMINORZ
+CODE_SMELL

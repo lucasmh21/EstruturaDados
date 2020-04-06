@@ -1,0 +1,8 @@
+package br.com.caelum.ed.listaLigada;
+
+public class Celula {
+	private Celula proxima;
+	private Celula anterior;
+	
+	private Object object;
+}

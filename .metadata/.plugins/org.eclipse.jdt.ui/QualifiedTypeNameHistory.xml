@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.code.Attribute.Array"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.lista.Vetor"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.Aluno"/>
+    <fullyQualifiedTypeName name="java.lang.Iterable"/>
+    <fullyQualifiedTypeName name="java.io.NotSerializableException"/>
+    <fullyQualifiedTypeName name="jdk.jshell.spi.ExecutionControl.NotImplementedException"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.lista.Vetor.DataSetIterator"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.lista.ILista"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.listaLigada.IListaLigada"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.listaLigada.Celula"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.listaLigada.ListaLigada.ListaLigadaIterator"/>
+    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.listaLigada.ListaLigada.Celula"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.Peca"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.pilha.IPilha"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.listaLigada.ListaLigada"/>
+    <fullyQualifiedTypeName name="br.com.caelum.ed.pilha.Pilha"/>
+</qualifiedTypeNameHistroy>

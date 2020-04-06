@@ -1,0 +1,21 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007feb6e6fb14d, pid=25251, tid=25266
+#
+# JRE version: OpenJDK Runtime Environment (11.0.6+10) (build 11.0.6+10)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.6+10, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x314d]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x6d
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h" (or dumping to /home/Lucas/eclipse-workspace/Estrutura de dados/Ed/core.25251)
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:45041 -javaagent:/home/Lucas/eclipse/jee-2019-12/eclipse/configuration/org.eclipse.osgi/405/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 br.com.caelum.main.Main
+
+Host: 

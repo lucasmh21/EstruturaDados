@@ -1,0 +1,32 @@
+package br.com.caelum.ed.listaLigada;
+
+public class Celula {
+	private Celula proxima;
+	private Celula anterior;
+	
+	private Object object;
+
+	public Celula getProxima() {
+		return proxima;
+	}
+
+	public void setProxima(Celula proxima) {
+		this.proxima = proxima;
+	}
+
+	public Celula getAnterior() {
+		return anterior;
+	}
+
+	public void setAnterior(Celula anterior) {
+		this.anterior = anterior;
+	}
+
+	public Object getObject() {
+		return object;
+	}
+
+	public void setObject(Object object) {
+		this.object = object;
+	}
+}

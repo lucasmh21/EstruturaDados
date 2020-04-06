@@ -1,0 +1,196 @@
+package br.com.caelum.ed.listaLigada;
+
+import java.util.Iterator;
+
+public class ListaLigada<T> implements IListaLigada<T>{
+	
+	private static final int PRIMEIRO_LISTA = 0;
+	private Celula primeira;
+	private Celula ultima;
+	
+	private int tamanho;
+
+	@Override
+	public void adiciona(T t) {
+		Celula atual = new Celula(t);
+		if(tamanho == 0) {
+			primeira = atual;
+			ultima = primeira;
+		}
+		else {
+			Celula penultima = ultima;
+			ultima = atual;
+			ultima.anterior = penultima;
+			penultima.proxima = ultima;
+		}
+		tamanho++;
+	}
+
+	@Override
+	public void adiciona(T t, int posicao) {
+		if(posicao > tamanho) {
+			throw new IllegalArgumentException();
+		}
+		Celula atual = new Celula(t);
+		if(posicao == tamanho) { 
+			adiciona(t);//Adiciona no fim
+			return;
+		}
+		if(posicao == PRIMEIRO_LISTA) {
+			adicionaNoComeco(t);
+			return;
+		}
+		adicionaNoMeio(posicao, atual);
+	}
+
+	private void adicionaNoMeio(int posicao, Celula atual) {
+		Celula celulaIndice = obtemPorIndice(posicao);
+		celulaIndice.anterior.proxima = atual;	
+		atual.anterior = celulaIndice.anterior;
+		atual.proxima = celulaIndice;
+		celulaIndice.anterior = atual;
+		tamanho++;
+	}
+	
+	private void validaPosicao(int posicao) {
+		if(posicao>=tamanho)
+			throw new IllegalArgumentException();
+	}
+
+	private Celula obtemPorIndice(int indice) {
+		validaPosicao(indice);
+		Celula atual = primeira;
+		for(int i=0;i<tamanho;i++) {
+			if(indice == i)
+				return atual;
+			atual = atual.proxima;
+		}
+		throw new IllegalArgumentException();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public T pega(int posicao) {
+		return (T) obtemPorIndice(posicao).getObject();
+	}
+
+	@Override
+	public boolean contem(T t) {
+		return buscaCelula(t) != null;
+	}
+
+	private Celula buscaCelula(T t) {
+		Celula atual = primeira;
+		while(atual != null) {
+			if(atual.getObject().equals(t)) {
+				return atual; 
+			}
+			atual = atual.proxima;
+		}
+		return null;
+	}
+
+	@Override
+	public void remove(T t) {
+		Celula celulaEncontrada = buscaCelula(t);
+		if(celulaEncontrada == null)
+			throw new IllegalArgumentException();
+		boolean ehUnicoElemento = celulaEncontrada.anterior == null && celulaEncontrada.proxima == null;
+		if(ehUnicoElemento) {
+			primeira = null;
+			ultima = null;
+			return;
+		}
+		if(celulaEncontrada.anterior != null) {
+			celulaEncontrada.anterior.proxima = celulaEncontrada.proxima;
+		}
+		if(celulaEncontrada.proxima != null) {
+			celulaEncontrada.proxima.anterior = celulaEncontrada.anterior;
+		}
+		tamanho--;
+	}
+
+	@Override
+	public int tamanho() {
+		return tamanho;
+	}
+
+	@Override
+	public int index(T t) {
+		Celula atual = primeira;
+		for(int i=0;i<tamanho;i++) {
+			if(atual.object.equals(t))
+				return i;
+			atual = atual.proxima;
+		}
+		throw new IllegalArgumentException();
+	}
+
+	@Override
+	public void adicionaNoComeco(T t) {
+		Celula celula = new Celula(t);
+		celula.proxima = primeira.proxima;
+		primeira.anterior = celula;
+		primeira = celula;
+		tamanho++;
+	}
+
+	@Override
+	public void removeNoInicio() {
+		primeira.proxima.anterior = null;
+		primeira = primeira.proxima;
+		tamanho--;
+	}
+
+	@Override
+	public void removeNoFim() {
+		ultima.anterior.proxima = null;
+		ultima = ultima.anterior;
+		tamanho--;
+	}
+	
+	@Override
+	public Iterator<T> iterator() {
+		return new ListaLigadaIterator<>();
+	}
+	
+	private class Celula {
+		private Celula proxima;
+		private Celula anterior;
+		
+		private Object object;
+
+		public Celula(Object object) {
+			this.object = object;
+		}
+
+		public Object getObject() {
+			return object;
+		}
+	}
+	
+	public class ListaLigadaIterator<E> implements Iterator<E>{
+
+		private ListaLigada<T>.Celula atual;
+
+		public public ListaLigadaIterator() {
+			this.atual = primeira;
+		}
+		
+		@Override
+		public boolean hasNext() {
+			if(atual == null) {
+				return false;
+			}
+			
+		}
+
+		@Override
+		public E next() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
+	
+}
